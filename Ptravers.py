@@ -11,10 +11,10 @@ def eratosthene (n) :
 	result = [j for j in range(2, n) if boolTab[j] == True]
 	return result
 
-import time
-def mesureEra (taille, nbech) :
-	t_avant = time.time()
-	for ech in range(nbech) :
-		s = eratosthene(taille)
-	print( (time.time() - t_avant) / nbech)
+# version bonus non optimale
+def RA_toast (n) :
+	nombres = {i for i in range(2,n+1)}
+	nonP = {i+i*m for i in range(2,n+1) if True for m in range(1,n+1) if i+i*m <= n}
+	premiers = nombres-nonP
+	return premiers
 
