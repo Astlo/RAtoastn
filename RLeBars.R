@@ -1,3 +1,8 @@
+# Clement TRAVERS Guillaume FORTIN Yannis LE BARS
+# Groupe B Master ALMA
+# Crible d'eratosthene - Langage R
+
+# pas optimal
 toast <- function(n) {
   if (n < 2) return(NULL)
   a <- rep(T, n)
@@ -12,4 +17,4 @@ toast <- function(n) {
   return(which(a))
 }
 
-toast(10^4)
+#system.time(r<-toast(10^5))
